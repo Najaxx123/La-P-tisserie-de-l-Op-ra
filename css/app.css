@@ -1,0 +1,101 @@
+/* 
+.circle, .square {
+    width: 500px;
+    height: 500px;
+    background-color: #80ff2b;
+    border-radius: 50%;
+    margin-top: 20px;
+   
+}
+
+.square {
+    border-radius: 0px;
+    animation-name: translate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.square_1 { animation-direction: normal;}
+.square_2 { animation-direction: reverse;}
+.square_3 { animation-direction: alternate;}
+.square_4 { animation-direction: alternate-reverse;animation-play-state:paused;}
+.square_4:hover { animation-play-state: running;}
+
+
+@keyframes translate {
+    100% { transform: translateX(1200px);}
+}
+
+    .circle:hover {
+    animation-name: color;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; 
+}
+
+.circle_1  { animation-fill-mode: none;} 
+.circle_2  { animation-fill-mode: forwards;}
+.circle_3  { animation-fill-mode: backwards;}
+.circle_4  { animation-fill-mode: both;} 
+
+
+@keyframes color {
+    0% { background-color: violet}
+    100% { background-color: #FF0000;}
+} 
+*/
+
+.loader {
+    width: 500px;
+    height: 500px;
+    background-color: #e97634;
+     animation: flip 1.5s infinite;
+}
+
+@keyframes flip {
+    0% { transform: rotate();}
+    50% { transform: rotateY(180deg);}
+   100% { transform: rotateY(180deg) rotateX(180deg);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
