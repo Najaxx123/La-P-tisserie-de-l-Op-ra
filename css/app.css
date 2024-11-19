@@ -43,7 +43,6 @@
     0% { background-color: violet}
     100% { background-color: #FF0000;}
 } 
-*/
 
 .loader {
     width: 500px;
@@ -57,11 +56,27 @@
     50% { transform: rotateY(180deg);}
    100% { transform: rotateY(180deg) rotateX(180deg);}
 }
+*/
+* { margin: 0; padding: 0;}
 
+.circle {
+    position: absolute;
+    left: -200px;
+    top: 480px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+}
 
+.sun { background-color: #ef8e38;}
+.moon { background-color: #f5f3ce;}
+.sky { background-color: #ff4d00; height: 60vh; }
 
-
-
+.beach {
+    height: 40vh;
+    position: absolute;
+    width: 100%;
+    background-color: #c2b280;
+}
 
 
 
