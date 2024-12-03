@@ -56,7 +56,6 @@
     50% { transform: rotateY(180deg);}
    100% { transform: rotateY(180deg) rotateX(180deg);}
 }
-*/
 * { margin: 0; padding: 0;}
 
 .circle {
@@ -67,9 +66,19 @@
     border-radius: 50%;
 }
 
-.sun { background-color: #ef8e38;}
-.moon { background-color: #f5f3ce;}
-.sky { background-color: #ff4d00; height: 60vh; }
+.sun { 
+    background-color: #ef8e38;
+    animation: sun_animation 10s linear;
+}
+.moon { 
+    background-color: #f5f3ce;
+    animation: moon_animation 10s linear 9s;
+}
+.sky { 
+    background-color: #ff4d00;
+     height: 60vh; 
+    animation: sky_animation 20s linear;
+}
 
 .beach {
     height: 40vh;
@@ -78,39 +87,131 @@
     background-color: #c2b280;
 }
 
+@keyframes sun_animation {
+    0% { transform: translate(0px, 0px);}
+    25% { transform: translate(430px, -250px);}
+    50% { transform: translate(1060px, -450px);}
+    75% { transform: translate(1690px, -250px);}
+    100% { transform: translate(2120px, 0px);}
+}
+
+@keyframes moon_animation {
+    0% { transform: translate(0px, 0px);}
+    25% { transform: translate(430px, -250px);}
+    50% { transform: translate(1060px, -450px);}
+    75% { transform: translate(1690px, -250px);}
+    100% { transform: translate(2120px, 0px);}
+}
+
+@keyframes sky_animation {
+    0% { background-color: #ff4d00; }
+    20% { background-color: #5b98c3; }
+    35% { background-color: #7ec0ee; }
+    40% { background-color: #f66f65; }
+    52% { background-color: #1b1e23; }
+    90% { background-color: #232529; }
+    100% { background-color: #ff4d00; }
+}
 
 
+.squares-container {
+  position: relative;
+}
+
+.square_1,
+.square_2,
+.square_3,
+.square_4 {
+  width: 500px;
+  height: 500px;
+  background-color: #80ff2b;
+  position: absolute;
+}
+
+.square_1 {
+  animation: slide_animation 15s ease-in-out 0s infinite;
+  top: 0px;
+}
+
+.square_2 {
+  animation: slide_animation 15s ease-in-out 2s infinite;
+  top: 500px;
+}
+.square_3 {
+  animation: slide_animation 15s ease-in-out 4s infinite;
+  top: 1000px;
+}
+.square_4 {
+  animation: slide_animation 15s ease-in-out 6s infinite;
+  top: 1500px;
+}
+
+@keyframes slide_animation {
+  0% {
+    position: absolute;
+    left: 0px;
+  }
+  12.5% {
+    left: 100px;
+  }
+  15% {
+    left: 200px;
+  }
+  27.5% {
+    left: 300px;
+  }
+  40% {
+    left: 400px;
+  }
+
+  52.5% {
+    left: 400px;
+  }
+  65% {
+    left: 300px;
+  }
+
+  77.5% {
+    left: 200px;
+  }
+
+  90% {
+    left: 100px;
+  }
+
+  100% {
+    left: 00px;
+  }
+}
+*/
 
 
+.svg-container {
+    background-color: tomato;
+    height: 150px;
+    width: 150px;
+}
 
+svg {
+    width: 100%;
+}
 
+/* .svg-container {
+  height: 150px;
+  width: 150px;
+}*/
 
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 999;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+} 
